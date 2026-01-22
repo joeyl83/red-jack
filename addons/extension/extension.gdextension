@@ -1,0 +1,7 @@
+[configuration]
+entry_symbol = "game_library_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+macos.debug = "res:///bin/libgame.dylib"
+macos.release = "res://bin/libgame.dylib"

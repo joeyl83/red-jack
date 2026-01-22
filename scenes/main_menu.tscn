@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://b486idtrsplvk"]
+
+[ext_resource type="Texture2D" uid="uid://cwpv5flngx86b" path="res://assets/images/redjack-bg1.png" id="1_b10jt"]
+[ext_resource type="FontFile" uid="uid://dp0npdv5b6dfv" path="res://assets/fonts/ari-w9500-bold.ttf" id="2_7bp0d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_208m3"]
+texture = ExtResource("1_b10jt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tgnp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7uec"]
+bg_color = Color(0.511436, 0, 0.158258, 0.894118)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.164706)
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_no6wl"]
+bg_color = Color(0.973773, 0.000255141, 0.33235, 0.894118)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.164706)
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ydms"]
+bg_color = Color(0.643137, 0, 0.207843, 0.894118)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.164706)
+shadow_size = 4
+shadow_offset = Vector2(0, 3)
+
+[node name="MainMenu" type="MainMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_208m3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.5
+offset_top = -67.0
+offset_right = 222.5
+offset_bottom = 208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tgnp3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g7uec")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_no6wl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ydms")
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tgnp3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g7uec")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_no6wl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ydms")
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tgnp3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g7uec")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_no6wl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ydms")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -269.0
+offset_right = 224.0
+offset_bottom = -122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.411765, 0, 0, 0.662745)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("2_7bp0d")
+theme_override_font_sizes/font_size = 100
+text = "RedJack"
+horizontal_alignment = 1
+vertical_alignment = 1
